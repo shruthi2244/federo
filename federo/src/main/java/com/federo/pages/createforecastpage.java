@@ -9,6 +9,7 @@ import com.federoGenericLib.WebDriverCommonLib;
 
 public class createforecastpage {
 	@FindBy(xpath="//select[@id=\"forecastYear\"]") private WebElement fcoption;
+	@FindBy(xpath="//select[@name=\"forecastQuarter\"]") private WebElement fqoption;
 	@FindBy(xpath="//input[@value=\"Next\"]") private WebElement nextbtn;
 	@FindBy(xpath="(//input[@value=\"Save\"])[1]") private WebElement savebtn;
 	public createforecastpage() {
@@ -16,8 +17,10 @@ public class createforecastpage {
 	}
 	WebDriverCommonLib wlib=new WebDriverCommonLib();
 	public void selectforecastoption() {
-		wlib.selectoption(fcoption, 4);
+		wlib.selectoption(fcoption, 5);
 		fcoption.click();
+		wlib.selectoption(fcoption, 3);
+		fqoption.click();
 		nextbtn.click();
 		savebtn.click();
 	}

@@ -1,6 +1,7 @@
 package com.federoGenericLib;
 
 import java.io.File;
+import java.util.Set;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -84,6 +85,17 @@ public class WebDriverCommonLib {
 		File src=element.getScreenshotAs(OutputType.FILE);
 		File dest=new File(screenshotpath);
 		Files.copy(src, dest);
+	}
+	public void getwindowhandle(String targetwindowtitle, WebElement element) {
+		String mainwindow=BaseTest.driver.getWindowHandle();
+		Set<String> allwndhdls=BaseTest.driver.getWindowHandles();
+		for(String windowhandle:allwndhdls) {
+			String title=BaseTest.driver.switchTo().window(windowhandle).getTitle();
+			if(title.equals(targetwindowtitle)) {
+				element.click();
+			}
+		}
+		//BaseTest.driver.switchTo().window(mainwindow);
 	}
 	public void WaitForPageTitle(String title)
 	{

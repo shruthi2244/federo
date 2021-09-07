@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.federo.leads.createleadtest"/>
+      <class name="com.federo.compaigns.compaignstest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
