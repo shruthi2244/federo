@@ -1,10 +1,9 @@
 package com.federo.accounts;
 
 import org.testng.annotations.Test;
-
 import com.federo.pages.LoginPage;
 import com.federo.pages.createaccountpage;
-import com.federo.pages.homeacountpage;
+import com.federo.pages.homepage;
 import com.federo.pages.newaccountpage;
 import com.federoGenericLib.BaseTest;
 import com.federoGenericLib.FileLib;
@@ -21,7 +20,7 @@ public class createaccounttest extends BaseTest {
 	lp.loginToApp(flib.readPropertyData(PROP_PATH, "username"), flib.readPropertyData(PROP_PATH, "password"));
 	WebDriverCommonLib wlib =new WebDriverCommonLib();
 	wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "homeTitle"), "Home Page");
-	homeacountpage ha=new homeacountpage();
+	homepage ha=new homepage();
 	ha.clickaccounttab();
 	wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "customviewtitle"), "custom view title page");
 	newaccountpage ac=new newaccountpage();

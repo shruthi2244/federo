@@ -17,9 +17,9 @@ public class createforecastpage {
 	}
 	WebDriverCommonLib wlib=new WebDriverCommonLib();
 	public void selectforecastoption() {
-		wlib.selectoption(fcoption, 5);
+		wlib.selectoption(fcoption, 4);
 		fcoption.click();
-		wlib.selectoption(fcoption, 3);
+		wlib.selectoption(fcoption, 2);
 		fqoption.click();
 		nextbtn.click();
 		savebtn.click();

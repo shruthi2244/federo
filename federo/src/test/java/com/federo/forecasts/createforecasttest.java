@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import com.federo.pages.LoginPage;
 import com.federo.pages.createforecastpage;
-import com.federo.pages.forecastpage;
+import com.federo.pages.homepage;
 import com.federoGenericLib.BaseTest;
 import com.federoGenericLib.FileLib;
 import com.federoGenericLib.WebDriverCommonLib;
@@ -19,8 +19,8 @@ public class createforecasttest extends BaseTest{
 		lp.loginToApp(flib.readPropertyData(PROP_PATH, "username"), flib.readPropertyData(PROP_PATH, "password"));
 		WebDriverCommonLib wlib =new WebDriverCommonLib();
 		wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "customviewpage"), "custom view Page");
-		forecastpage fp=new forecastpage();
-		fp.clickforecast();
+		homepage hp=new homepage();
+		hp.clickforbtn();
 		wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "create forecast"), "create forecast page");
 		createforecastpage cf=new createforecastpage();
 		cf.selectforecastoption();

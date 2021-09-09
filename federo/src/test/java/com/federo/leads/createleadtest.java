@@ -1,11 +1,10 @@
 package com.federo.leads;
 
 import org.testng.annotations.Test;
-
-import com.federo.pages.Homepageleads;
 import com.federo.pages.LoginPage;
 import com.federo.pages.createleadpage;
 import com.federo.pages.customviewpage;
+import com.federo.pages.homepage;
 import com.federoGenericLib.BaseTest;
 import com.federoGenericLib.FileLib;
 import com.federoGenericLib.WebDriverCommonLib;
@@ -21,8 +20,8 @@ public class createleadtest extends BaseTest {
 	lp.loginToApp(flib.readPropertyData(PROP_PATH, "username"), flib.readPropertyData(PROP_PATH, "password"));
 	WebDriverCommonLib wlib =new WebDriverCommonLib();
 	wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "homeTitle"), "Home Page");
-	Homepageleads hp=new Homepageleads();
-	hp.clickLeadstab();
+	homepage hp=new homepage();
+	hp.clickleads();
 	wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "customviewtitle"), "custom view page");
 	customviewpage cv=new customviewpage();
 	cv.clickleadstab();

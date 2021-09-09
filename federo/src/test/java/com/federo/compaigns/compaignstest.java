@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import com.federo.pages.LoginPage;
 import com.federo.pages.compaignpage;
 import com.federo.pages.compaigntaskpage;
+import com.federo.pages.homepage;
 import com.federoGenericLib.BaseTest;
 import com.federoGenericLib.FileLib;
 import com.federoGenericLib.WebDriverCommonLib;
@@ -20,9 +21,12 @@ public class compaignstest extends BaseTest{
 		LoginPage lp=new LoginPage();
 		lp.loginToApp(flib.readPropertyData(PROP_PATH, "username"), flib.readPropertyData(PROP_PATH, "password"));
 		wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "hometitle"), "home page");
-		compaignpage cp=new compaignpage();
-		cp.clickcompaignpage();
+		homepage hp=new homepage();
+		hp.clickcmpgn();
 		wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "customtitle"), "custom page");
+		compaignpage cp=new compaignpage();
+		cp.clickcompage();
+		wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "createtitle"), "create title page");
 		compaigntaskpage ctp=new compaigntaskpage();
 		ctp.clicktaskpage(flib.readExcelData(EXCEL_PATH, "Sheet1", 1, 0));
 		

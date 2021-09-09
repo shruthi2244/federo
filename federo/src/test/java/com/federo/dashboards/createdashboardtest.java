@@ -3,8 +3,8 @@ package com.federo.dashboards;
 import org.testng.annotations.Test;
 
 import com.federo.pages.LoginPage;
-import com.federo.pages.dashboardpage;
 import com.federo.pages.finishdashboardpage;
+import com.federo.pages.homepage;
 import com.federo.pages.selectdashboardpage;
 import com.federo.pages.showingdashboardpage;
 import com.federoGenericLib.BaseTest;
@@ -22,8 +22,8 @@ public class createdashboardtest extends BaseTest{
 		LoginPage lp=new LoginPage();
 		lp.loginToApp(flib.readPropertyData(PROP_PATH, "username"), flib.readPropertyData(PROP_PATH, "password"));
 		wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "hometitle"), "home page");
-		dashboardpage dp=new dashboardpage();
-		dp.clickdashboardpage();
+		homepage hp=new homepage();
+		hp.clickdashbtn();
 		wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "dashboardtitle"), "dashboard page");
 		showingdashboardpage sb=new showingdashboardpage();
 		sb.clickeditbtn();

@@ -7,15 +7,16 @@ import org.openqa.selenium.support.PageFactory;
 import com.federoGenericLib.BaseTest;
 
 public class compaignpage {
-	@FindBy(xpath="//a[text()='Campaigns']") private WebElement cmpbtn;
-	@FindBy(xpath="(//input[@name=\"chk\"])[8]") private WebElement chkbox;
+	@FindBy(xpath="(//input[@name=\"chk\"])[8]")  private WebElement chkbtn;
 	@FindBy(xpath="//input[@value=\"Create Task\"]") private WebElement ctbtn;
 	public compaignpage() {
 		PageFactory.initElements(BaseTest.driver, this);
+	
 	}
-	public void clickcompaignpage() {
-		cmpbtn.click();
-		chkbox.click();
+	public void clickcompage() {
+		chkbtn.click();
 		ctbtn.click();
+		
+		
 	}
 }

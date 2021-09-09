@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.federoGenericLib.BaseTest;
 
 public class showingdashboardpage {
-	@FindBy(xpath="(//a[text()='Edit'])[1]") private WebElement editbtn;
+	@FindBy(xpath="(//a[text()='Edit'])[2]") private WebElement editbtn;
 	public showingdashboardpage() {
 		PageFactory.initElements(BaseTest.driver, this);
 	}

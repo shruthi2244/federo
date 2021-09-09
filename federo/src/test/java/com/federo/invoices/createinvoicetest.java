@@ -3,9 +3,9 @@ package com.federo.invoices;
 import org.testng.annotations.Test;
 
 import com.federo.pages.LoginPage;
+import com.federo.pages.homepage;
 import com.federo.pages.invoicecreatepage;
 import com.federo.pages.invoicemandatorydetailspage;
-import com.federo.pages.invoicepage;
 import com.federo.pages.scrollinvoice;
 import com.federoGenericLib.BaseTest;
 import com.federoGenericLib.FileLib;
@@ -23,10 +23,10 @@ public class createinvoicetest extends BaseTest{
 			flib.readPropertyData(PROP_PATH, "password"));
 	wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "hometitle"), 
 			"home page");
-	scrollinvoice si=new scrollinvoice();
-	si.clickinvoicepage();
-	invoicepage ip=new invoicepage();
-	ip.clickinvoicepage();
+	scrollinvoice sc = new scrollinvoice();
+	sc.clickinvoicepage();
+	homepage hp=new homepage();
+	hp.clickinvoice();
 	wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "customtitle"),
 			"custom page");
 	invoicecreatepage icp=new invoicecreatepage();

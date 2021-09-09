@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import com.federo.pages.LoginPage;
 import com.federo.pages.createreportpage;
-import com.federo.pages.homepagereports;
+import com.federo.pages.homepage;
 import com.federo.pages.reportswizardpage;
 import com.federo.pages.savereportpage;
 import com.federoGenericLib.BaseTest;
@@ -22,12 +22,12 @@ public class createreporttest extends BaseTest{
 		lp.loginToApp(flib.readPropertyData(PROP_PATH, "username"), flib.readPropertyData(PROP_PATH, "password"));
 		WebDriverCommonLib wlib =new WebDriverCommonLib();
 		wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "homeTitle"), "Home Page");
-		homepagereports hp = new homepagereports();
-		hp.clickhomepagereports();
+		homepage hp = new homepage();
+		hp.clickreport();
 		wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "showingreportlist"), "showing reports list page");
-		createreportpage cp=new createreportpage();
-		cp.clickcraetereportpage();
 		wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "reportswizard "), "reports wizard page");
+		createreportpage cr=new createreportpage();
+		cr.clickcraetereportpage();
 		reportswizardpage rw=new reportswizardpage();
 		rw.cliclreportswizardpage();
 		wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "reportswizard "), "reports wizard page");

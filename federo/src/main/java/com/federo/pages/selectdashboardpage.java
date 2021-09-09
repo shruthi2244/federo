@@ -8,7 +8,7 @@ import com.federoGenericLib.BaseTest;
 import com.federoGenericLib.WebDriverCommonLib;
 
 public class selectdashboardpage {
-	@FindBy(xpath="(//select[@class=\"select\"])[3]") private WebElement selectbtn;
+	@FindBy(xpath="//select[@name=\"srcReport\"]") private WebElement selectbtn;
 	@FindBy(xpath="//input[@value=\"Next\"]") private WebElement nextbtn;
 	public selectdashboardpage() {
 		PageFactory.initElements(BaseTest.driver, this);

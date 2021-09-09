@@ -15,7 +15,7 @@ public class quotedetailspage {
 	public quotedetailspage() {
 		PageFactory.initElements(BaseTest.driver, this);
 	}
-	public void createwithmandatorydetails(String Subject, String AccountName, String productname, String qtyname) {
+	public void createwithmandatorydetails(String Subject, String AccountName, String productname, String qtyname, String string) {
 		sbjname.sendKeys(Subject);
 		accname.sendKeys(AccountName);
 		pdtname.sendKeys(productname);
@@ -23,3 +23,4 @@ public class quotedetailspage {
 		savebtn.click();
 	}
 }
+//input[@name="property(txtQty1)"]

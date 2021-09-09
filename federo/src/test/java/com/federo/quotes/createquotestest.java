@@ -4,8 +4,8 @@ import org.testng.annotations.Test;
 
 import com.federo.pages.LoginPage;
 import com.federo.pages.createquotepage;
+import com.federo.pages.homepage;
 import com.federo.pages.quotedetailspage;
-import com.federo.pages.quotesdetailspage;
 import com.federo.pages.scrollrightquotespage;
 import com.federoGenericLib.BaseTest;
 import com.federoGenericLib.FileLib;
@@ -24,16 +24,16 @@ public class createquotestest extends BaseTest {
 	scrollrightquotespage scr=new scrollrightquotespage();
 	scr.scrollright();
 	wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "hometitle"), "home page");
-	quotesdetailspage qt=new quotesdetailspage();
-	qt.quotesdetails();
+	homepage hp=new homepage();
+	hp.clickqtsbtn();
 	wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "createquote"), "create quote page");
 	createquotepage cp=new createquotepage();
 	cp.clicknewquote();
 	wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "createquote"), "create quote page");
 	quotedetailspage qtp=new quotedetailspage();
-	qtp.createwithmandatorydetails(flib.readExcelData(EXCEL_PATH, "quotes", 0, 1),
-			flib.readExcelData(EXCEL_PATH, "quotes", 1, 1),flib.readExcelData(EXCEL_PATH, "quotes", 2, 2),
-			flib.readExcelData(EXCEL_PATH, "quotes", 3, 3));
+	qtp.createwithmandatorydetails(flib.readExcelData(EXCEL_PATH, "quotes", 1, 0),
+			flib.readExcelData(EXCEL_PATH, "quotes", 1, 1),flib.readExcelData(EXCEL_PATH, "quotes", 1, 2),
+			"3","43000");
 	
 }
 }
