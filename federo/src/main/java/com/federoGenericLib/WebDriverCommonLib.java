@@ -12,11 +12,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Reporter;
+
 
 import com.google.common.io.Files;
 
-import junit.framework.Assert;
+
 
 public class WebDriverCommonLib {
 	public String getPageTitle(){

@@ -14,7 +14,7 @@ public class BaseTest implements IAutoConsts {
 	@BeforeClass
 	public void openBrowser() throws Throwable
 	{
-		FileLib flib = new FileLib();
+		FileLib flib=new FileLib();
 		String browserName=flib.readPropertyData(PROP_PATH, "browser");
 		if(browserName.equals("chrome")) {
 			System.setProperty(CHROME_KEY, CHROME_VALUE);

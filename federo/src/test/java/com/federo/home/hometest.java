@@ -3,6 +3,7 @@ package com.federo.home;
 import org.testng.annotations.Test;
 
 import com.federo.pages.LoginPage;
+import com.federo.pages.homehomepage;
 import com.federo.pages.homepage;
 import com.federoGenericLib.BaseTest;
 import com.federoGenericLib.FileLib;
@@ -20,6 +21,8 @@ public class hometest extends BaseTest{
 		wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "homeTitle"), "Home Page");
 		homepage ha=new homepage();
 		ha.clickhometab();
-
+		wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "homepage"), "home page");
+		homehomepage hh=new homehomepage();
+		hh.clickradiobtn();
 }
 }
