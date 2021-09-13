@@ -4,15 +4,26 @@
   <artifactId>fedro</artifactId>
   <version>3.5</version>
   
-  
+  <properties>
+  <jre.level>1.7</jre.level>
+  <jdk.level>1.7</jdk.level>
+  </properties>
   	<build>
 		<plugins>
-			
+			<!-- Compiler plug-in -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${jdk.level}</source>
+					<target>${jdk.level}</target>
+				</configuration>
+			</plugin>
 			<!-- Below plug-in is used to execute tests -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.19.1</version>
+				<version>3.0.0-M5</version>
 				<configuration>
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
@@ -22,8 +33,6 @@
 			</plugin>
 		</plugins>
 	</build>
- 
-  
   <dependencies>
   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
@@ -56,6 +65,13 @@
     <artifactId>maven-compiler-plugin</artifactId>
     <version>3.1</version>
 </dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.0.0-M5</version>
+</dependency>
+
   
   </dependencies>
   

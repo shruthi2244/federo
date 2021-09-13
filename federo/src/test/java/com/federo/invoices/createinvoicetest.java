@@ -34,7 +34,7 @@ public class createinvoicetest extends BaseTest{
 			wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "customtitle"),
 					"custom view page");
 			invoicemandatorydetailspage imd =new invoicemandatorydetailspage();
-			imd.clickcreatemandatorydetails(flib.readExcelData(EXCEL_PATH, "Sheet1", 0, 1));
+			imd.clickcreatemandatorydetails(flib.readExcelData(EXCEL_PATH1, "Sheet1", 0, 1));
 	}
 
 }

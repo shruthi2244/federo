@@ -27,8 +27,8 @@ public class createleadtest extends BaseTest {
 	cv.clickleadstab();
 	wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "createleadtitle"), "create lead page");
 	createleadpage cl=new createleadpage();
-	     cl.createleadwithmandatorydetails(flib.readExcelData(EXCEL_PATH, "Sheet1", 0, 1),
-			flib.readExcelData(EXCEL_PATH, "Sheet1", 1,1));
+	     cl.createleadwithmandatorydetails(flib.readExcelData(EXCEL_PATH3, "Sheet1", 0, 1),
+			flib.readExcelData(EXCEL_PATH3, "Sheet1", 1,1));
 	wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "leaddetailstitle"), "lead deatils page");
 	}
 

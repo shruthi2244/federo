@@ -27,7 +27,7 @@ public class createaccounttest extends BaseTest {
 	ac.clickaccnewtab();
 	wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "createaccount"),"create account page");
 	createaccountpage ca=new createaccountpage();
-	ca.createaccwithmandatorydetails(flib.readExcelData(EXCEL_PATH, "accounts" , 1, 0));
+	ca.createaccwithmandatorydetails(flib.readExcelData(EXCEL_PATH6, "accounts" , 1, 0));
 	wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "create account"), "create account page");
 			
 	

@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.federo.compaigns.compaignstest">
+      <class name="com.federo.dashboards.createdashboardtest">
         <methods>
-          <include name="compaign"/>
           <include name="openBrowser"/>
+          <include name="dashboard"/>
         </methods>
-      </class> <!-- com.federo.compaigns.compaignstest -->
+      </class> <!-- com.federo.dashboards.createdashboardtest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
