@@ -3,7 +3,16 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
+      <class name="com.federo.accounts.createaccounttest"/>
       <class name="com.federo.leads.createleadtest"/>
+      <class name="com.federo.forecasts.createforecasttest"/>
+      <class name="com.federo.quotes.createquotestest"/>
+      <class name="com.federo.reports.createreporttest"/>
+      <class name="com.federo.home.hometest"/>
+      <class name="com.federo.cases.casestest"/>
+      <class name="com.federo.dashboards.createdashboardtest"/>
+      <class name="com.federo.invoices.createinvoicetest"/>
+      <class name="com.federo.compaigns.compaignstest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
